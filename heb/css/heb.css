@@ -1,0 +1,1028 @@
+@charset "UTF-8";
+/* ----------------------------------------------------
+	HEB Texas Website
+
+	* Description.......: HEB Texas Website
+	* Created by........: De'Von Favors
+	* Modified by.......: De'Von Favors and Thomas Knapp
+	* Created...........: 03/05/2015
+	* Version...........: 1.1
+
+---------------------------------------------------- */
+/*
+  //////// Global Styles ///////
+																				*/			
+		/* Foundation Offcanvas Override */
+		#main {padding:0 0 4px 0!important;}
+		
+		/* Webfont: UniversCondensedBold */
+		@font-face {
+				font-family: 'UniversCondensedBold';
+				src: url('fonts/Univers-CondensedBold.eot'); /* IE9 Compat Modes */
+				src: url('fonts/Univers-CondensedBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+						 url('fonts/Univers-CondensedBold.woff') format('woff'), /* Modern Browsers */
+						 url('fonts/Univers-CondensedBold.ttf') format('truetype'), /* Safari, Android, iOS */
+						 url('fonts/Univers-CondensedBold.svg#Univers-CondensedBold') format('svg'); /* Legacy iOS */
+				font-style: normal;
+				font-weight: normal;
+				text-rendering: optimizeLegibility; }
+				
+		/* Webfont: Univers-UltraCondensed */
+		@font-face {
+				font-family: 'UniversUltraCondensed';
+				src: url('fonts/Univers-UltraCondensed.eot'); /* IE9 Compat Modes */
+				src: url('fonts/Univers-UltraCondensed.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+						 url('fonts/Univers-UltraCondensed.woff') format('woff'), /* Modern Browsers */
+						 url('fonts/Univers-UltraCondensed.ttf') format('truetype'), /* Safari, Android, iOS */
+						 url('fonts/Univers-UltraCondensed.svg#Univers-UltraCondensed') format('svg'); /* Legacy iOS */
+				font-style: normal;
+				font-weight: normal;
+				text-rendering: optimizeLegibility; }
+		
+				
+		h2{
+				font:40px/45px "UniversUltraCondensed", Arial, Helvetica, sans-serif;
+				color:#004b91;
+				margin: 20px 0 0 0; }	
+
+		h3{
+				font:30px/35px "UniversUltraCondensed", Arial, Helvetica, sans-serif;
+				color:#f17829;
+				margin: 20px 0 0 0; }				
+		
+		h4 {
+				color:#444444;
+				font: bold 16px/18px Arial, Helvetica, sans-serif; }
+     									
+		p {
+				font: 13px/18px "Univers", Arial, Helvetica, sans-serif;
+				color:#444444; }
+				
+		sup {
+				color: inherit;
+				font-size: 50%;
+				top: -0.75em; }
+		
+		li {
+				color:#444444;
+				font: 13px/18px "Univers",Arial,Helvetica,sans-serif;
+				margin: 0 0 7px 0;
+		}
+		
+		a {
+				color: #004b91;
+				text-decoration:underline; }
+				
+					a:hover {
+						color: #75d3e3;
+						text-decoration:underline; }	
+						
+						
+		
+
+/*
+  //////// Header Styles ///////
+																				*/	
+		.header {
+			height: 55px;
+			padding-top:10px;
+			background-color:white;
+			background-color: rgba(255,255,255,100%);
+			position: relative;
+			z-index: 999; }
+				
+				.logo_bcbs {
+						margin-bottom:11px;
+						}
+				.logo_heb { 
+						width:70%;
+						float:right; }
+				
+				.top-menu {
+					position:relative;
+					right:-40px;
+					z-index:10; }
+				
+				.nav_button {
+					font-family:"UniversCondensedBold", Arial, Helvetica, sans-serif;
+					color: #444;
+					font-size:13px;
+					font-weight:normal;
+					line-height:13px;
+					text-decoration:none;
+					padding: 0 15px 0 35px;
+					background:url('../img/navIcons.png') no-repeat left top transparent;
+					display:block;
+					height:25px; }		
+					
+							.nav_contact { background-position: 0px -150px; }
+							.nav_provfinder { background-position: 0px -100px; }
+							.nav_education { background-position: 0px -50px; }	
+					
+					.nav_button:hover { color:#092f87; text-decoration:none; }
+							.nav_contact:hover { background-position: 0px -175px; }
+							.nav_provfinder:hover { background-position: 0px -125px; }
+							.nav_education:hover { background-position: 0px -75px; }	
+							.nav_fha:hover { background-position: 0px -25px; }
+							
+			.login { 
+					background-color: rgb(0,75,145);
+					height:36px;
+					position: relative;
+					z-index: 998; 
+					border-bottom: 3px solid #ffffff;}
+					
+					.index .login { 
+							background-color: rgb(0,75,145);
+							background-color: rgba(0,75,145,100%); }
+						
+						
+		/*======= Login Toggle Styles =======*/		
+		
+			.login_row { height:30px; }
+																					
+			#login_toggle {
+				display:block; 
+				position:relative;
+				top:12px;
+				float:right;
+				color:white;
+				font-size:13px;
+				margin-left:10px; }
+			#login_toggle a{
+				color: #ffffff; 
+				text-decoration: none;}	
+
+			#loginContainer { 
+				position:relative;
+				top:2px;
+				float:right;
+				padding:0;
+				display:none; }
+			
+					#BamLogin * { display:inline-block; }
+					#BamLogin input {
+						height:26px;
+						width:150px;
+						border:none;
+						font-size:11px;
+						color:#999;
+						padding-left:10px;
+						margin: 1px 0 0 0; }
+					
+					#BamLogin input[type="submit"] {
+						position: relative;
+						
+						padding:0px 10px;
+						height:26px;
+						background:#75d3e3;
+						border:none;
+						color:#FFF;
+						font-size:12px;
+						width:auto !important; }
+						
+						#BamLogin input[type="submit"]:hover { background-color:#CCC; }
+					
+					.login_help { width:15px; }
+	
+	
+	
+
+
+/*
+  //////// Footer Styles ///////
+																				*/	
+			.footer{
+					background-color:#004b91;
+					display: block;
+					color: #FFF;
+					padding: 25px 0 0;
+					text-align: center;}
+			
+			.footer ul{
+					margin-left:0; 
+					padding-left:0; }
+			
+			.footer li{
+					display:inline-block;
+					list-style-type: none;
+					text-transform: uppercase;
+					color: #FFF;
+					font-weight: normal; }
+			
+			.footer a{
+					color: #FFF !important;
+					text-decoration:none;
+					font-size:12px; }
+			
+			.footer a:hover{
+					text-decoration:underline; }
+			
+			.footer p{
+					font:12px/18px Arial, Helvetica, sans-serif;
+					color:#FFF;
+			}
+			
+			
+			.social_links { text-align:right; }
+			
+				.footer .social_links img{
+						display: inline;
+						height: 30px;
+						margin: 11px 0 0 5px;
+						padding: 0;
+						width: 30px;
+				}
+				
+					.social_links a:hover img{
+							-ms-transform: scale(1.2); /* IE 9 */
+							-webkit-transform: scale(1.2); /* Chrome, Safari, Opera */
+							transform: scale(1.2);
+					}
+				
+	
+			.disclaimer { font-size:70% !important; }
+			
+			.nowrap { white-space:nowrap; }
+			
+			
+			
+			
+/*
+//////// Mobile Menu Styles ///////
+																			*/	
+			#complementary {
+				background-color:rgb(0, 75, 145);
+				padding:0; }
+			
+			#complementary ul { 
+					list-style:none;
+					margin:0;
+					padding:0; }
+				
+				#complementary li { 
+						border-bottom: 1px solid #999;
+						padding:0 10px;
+						margin:0; }
+						
+						#complementary li:hover { background-color:#75d3e3; }
+						
+						#complementary li a {
+								display:block;
+								color:white;
+								text-decoration:none;
+								padding: 10px; }																
+														
+														
+																							
+	
+/*
+  //////// Home Page Styles ///////
+																				*/	
+				
+				
+		/*======= Image Rotator Styles =======*/	
+			.image_rotator {
+					position:relative;
+					top:1px; }
+					
+					
+					.image_rotator ul li { height:650px;}
+						
+						.wellness { background:url('../img/image_rotator/heb-desktop-image_rotator-covered-1x.png') no-repeat top center #F5F5F5 !important;  }
+						
+						.health_assistant { background:url('../img/image_rotator/home_2.png') no-repeat top center #F5F5F5 !important;}
+						.health_programs { background:url('/heb/img/image_rotator/heb-desktop-image-rotator-5-1x.png') no-repeat top center #F5F5F5 !important; }			
+
+							
+					.orbit-container {
+							background: none repeat scroll 0 0 #f5f5f5;
+							overflow: hidden;
+							position: relative;
+							width: 100%;
+							padding: 0 0 22px 0;
+						    margin-bottom: 10px;}
+					.orbit-container .orbit-timer .orbit-progress, .orbit-container .orbit-timer {display:none;}
+					.orbit-bullets {
+							margin: 0 30px 10px;
+							top: 0px;
+							float: right; }
+					    .orbit-container .orbit-slides-container img {
+					      display: block;
+					      max-width: 100%; }
+							
+							.orbit-bullets li { border:none; }
+							
+					.orbit-container .orbit-slides-container > * .orbit-caption { 
+							position:relative;	
+							background:none;
+							width:100%;
+							max-width:62.5em;
+							top:500px;
+							margin:0 auto;
+							padding:0; }
+							
+							.orbit-caption h1 { 
+									font:40px/45px "UniversUltraCondensed", Arial, Helvetica, sans-serif;
+									color: rgb(0,75,145);
+									margin:0; }
+									
+							.orbit-caption p { 
+									margin:0;
+									color:#444; }
+									
+									.orbit-caption p.disclaimer { margin-top:10px; }
+											
+							.orbit-caption a {
+								  display: block;
+									float: left;
+									padding: 9px 20px 5px 20px;
+									margin: 10px 0 ;
+									color: white;
+									background-color: rgb(0,75,145);
+									font-family:"UniversUltraCondensed", Arial, Helvetica, sans-serif;
+									font-size: 18px;
+									text-decoration:none;
+									font-weight:normal;
+									text-transform:uppercase; }
+									
+									.orbit-caption a:hover { 
+											background-color:#75d3e3;
+											border:1px solid #45bbcf; }
+								a.blue-access {
+								  display: inline;
+									text-decoration:underline;
+									color: #444;
+									display: inline;
+									float: none;
+									padding: 0;
+									margin: 0 ;
+									background-color: rgb(245,245,245);
+									font: 13px/18px "Univers", Arial, Helvetica, sans-serif;
+									text-transform:none;
+ }
+									
+									a:hover.blue-access { 
+									color: #75d3e3;
+									text-decoration:underline;
+									background-color: rgb(245,245,245);
+									border:none; }
+							
+							
+			/*======= Buckets Styles =======*/
+				.icons { 
+						margin-top:35px;
+						padding: 0 20px;
+						text-align:center; }
+				
+				.icons img { 
+						width:auto;
+						max-width: 144px;
+						border:none !important; }
+							
+				.icons h3 {
+						font-family:"UniversUltraCondensed", Arial, Helvetica, sans-serif;
+						text-transform:uppercase;
+						font-size:28px;
+						line-height:28px;
+						font-weight:normal;
+						margin:5px 0 0 0; }
+						
+						.icons.bkt_fha h3 { color:#6bb445; }
+						.icons.bkt_education h3 { color:#6b2e7d; }
+						.icons.bkt_provFinder h3 { color:#f38730; }
+						
+				.icons a {
+						display:block;
+						width:80%;
+						margin:15px auto 0 auto;
+						padding:10px 0;
+						border:1px solid rgb(0, 75, 145);
+						color:rgb(0, 75, 145);
+						font-family:"UniversUltraCondensed", Arial, Helvetica, sans-serif;
+						font-size: 18px;
+						text-decoration:none;
+						text-transform: uppercase;
+					}
+					
+						.icons a:hover { 
+							background-color:#75d3e3;
+							color:white;
+							border:1px solid #45bbcf; }
+					
+						.icons a.noBorder,
+						.icons a.noBorder:hover {
+							border:none;
+							max-width:100%;
+							width: auto; /* Prevent stretching of full-size images in IE8*/
+							background-color:transparent; }
+						
+						
+						
+						
+/*
+//////// Content Page Styles ///////
+																			*/						
+
+.content_banner{
+    margin: -2.333em 0 0 0;
+        height: 11.5em;
+        width: 100%;
+        background: no-repeat top center rgb(0, 75, 145); }  	
+		
+		.content_banner.fha-program {	background-image:	url('../img/hero_img/heb_fha_desktop_1x.png'); clear:both; position: relative; top:-4px;}
+		.content_banner.consumer-ed {	background-image:	url('../img/hero_img/heb_healthed_desktop_1x.png');clear:both;position: relative; top:-4px;}
+		.content_banner.provFinder {	background-image:	url('../img/hero_img/heb_provfinder_desktop_1x.png');clear:both;position: relative; top:-4px;}
+		.content_banner.contactUs {	background-image:	url('../img/hero_img/heb_contact_desktop_1x.png');clear:both;position: relative; top:-4px;}
+		.content_banner.wellness-regist {	background-image:	url('../img/hero_img/heb_wheretogo_desktop_1x.png');clear:both;position: relative;height: 11.8em; top:-4px;}
+		.content_banner.take-action {	background-image: url('../img/hero_img/heb-takeaction-desktop-1x.png');clear:both;position: relative; top:-4px;}
+		.content_banner.covered {	background-image: url('../img/hero_img/heb-covered-desktop-1x.png');clear:both;position: relative; top:-4px;}
+	
+            .content_banner h1{
+                    font:3.833em "UniversUltraCondensed", Arial, Helvetica, sans-serif;
+                    text-transform:uppercase;
+                    position:relative;
+                    top:36%;
+                    left:45%;
+                    margin-bottom: 0.1em;
+                    color:#ffffff;
+                    color:rgba(255,255,255, .6); }
+					
+            .content_banner hr {
+                    color:#ffffff;
+                    max-width:62.5em;
+                    height:3em;
+                    margin-bottom: -5px;
+                    border:none;
+                    border-bottom:0.167em solid rgb(255,255,255);
+                    border-bottom:0.167em solid rgba(255,255,255, .6); }
+					
+			.content_banner p{
+					color:#ffffff;
+					color:rgba(255,255,255, .6);
+					position:relative;
+					left:40%;  }
+	
+.divider_arrow_line {
+		border-top:1px solid #828282;
+        margin: 0 auto;
+		max-width:62.5em; }
+		
+		.divider_arrow { 
+				margin: 0 auto;
+				width: 0;
+				height: 0;
+				border-left: 25px solid transparent;
+				border-right: 25px solid transparent;
+				border-top: 18px solid #004b91; }
+
+.mid-border{
+    border-bottom:1px solid #828282;
+    margin: 25px auto 25px;
+		max-width:62.5em;
+}
+
+.btm-border{
+    border-bottom:1px solid #828282;
+    margin: 35px auto 15px auto;
+		max-width:62.5em;
+}
+
+.bcbs-blue{
+    color:#004b91;
+}
+
+
+/*
+//////// Provider Finder Page Styles //////
+*/
+
+.image-flex {
+    height: 0;
+    margin-bottom: 1em;
+    overflow: hidden;
+    padding-bottom: 33.5%;
+    padding-top: 1.5625em;
+    position: relative;
+}
+.quick-search {
+    height: 58px !important;
+    left: -5%;
+    margin: 5px 0 0;
+    padding: 0 23px;
+    text-align: center;
+}
+/*
+//////// FHA Program Page Styles //////
+*/	
+.fha-program h1 {
+    color: rgba(255, 255, 255, 0.6);
+    font: 61px "UniversUltraCondensed",Arial,Helvetica,sans-serif;
+    left: 37%;
+    margin-bottom: 8px;
+    position: relative;
+    text-transform: uppercase;
+    top: 67px;
+}
+.direct-number{
+	font-size: 150%;
+}
+.fha-img{
+	margin: 30px;
+}
+.fhas{
+	border: 1px solid #999999;	
+	padding: 1em 0 0 0;
+	margin: 0.938em 0;
+}
+.fhas img{
+	height: 13.6em;
+	float: left;
+}
+.fhas h3{
+	font: 2.4em "UniversUltraCondensed",Arial,Helvetica,sans-serif;
+}
+.fhas p{
+	display: inline;
+	font: 1.7em "UniversUltraCondensed",Arial,Helvetica,sans-serif;
+}
+/*.fhas hr{
+ 	height: 2em;
+ 	border: 0;
+ 	background: #dbe6ef;
+}
+*/
+.fha-background{
+    background-color: #dbe6ef;
+    border: 0;
+    height: 5em;
+    margin: 2.7em 0 0 0;
+}
+/*
+//////// Where you go matters Page Styles //////
+*/
+ h1.where-to-go{
+    color: rgba(255, 255, 255, 0.6);
+    font: 3.5em "UniversUltraCondensed",Arial,Helvetica,sans-serif;
+    left: 45%;
+    margin-bottom: -0.8em;
+    position: relative;
+    text-transform: uppercase;
+    top: 10%;
+}
+.marTop{
+	margin-top: 1.250em;
+}
+.where-search-now {
+    height: 58px !important;
+    left: -8%;
+    margin: 0 0 34px;
+    padding: 0 25px;
+    text-align: center;
+}
+
+/*
+//////// Wellness Registration Page Styles //////
+*/
+
+.call-us {
+    border: 0.125em solid #6b2e7d;
+    margin: 0.938em;
+    padding: 0.75em;
+    text-align: center;
+}           
+.call-us h3{
+    color: #6b2e7d;
+    text-transform: uppercase;
+    padding: 0.375em 0 0 0;
+}
+.call-us-circle {
+    background-color: #6b2e7d;
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+   -moz-border-radius:50%;
+   -webkit-border-radius:50%;
+   -khtml-border-radius: 50%;
+    behavior: url("/js/PIE.htc");
+    color: #ffffff;
+    font: 37px "UniversUltraCondensed",Arial,Helvetica,sans-serif;
+    left: 41%;
+    padding:9px 19px;
+    position: absolute;
+    top: -6.5%;
+    width: 60px;
+    height: 60px;
+}                       
+.connect-with-us{
+    border: 2px solid #e81c31;
+    text-align: center;
+    margin: 0.938em;
+    padding: 0.75em;    
+}           
+.connect-with-us h3{
+    color: #e81c31;
+    text-transform: uppercase;
+    padding: 0.375em 0 0 0;
+}   
+.connect-circle{
+    background-color: #e81c31;
+    border-radius: 50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    -khtml-border-radius: 50%;
+    behavior: url("/js/PIE.htc");
+    color: #ffffff;
+    font: 37px "UniversUltraCondensed",Arial,Helvetica,sans-serif;
+    height: 60px;
+    left: 43%;
+    border: 4px solid #ffffff;
+    padding: 9px 19px;
+    position: absolute;
+    top: -6.5%;
+    width: 60px;
+}
+.meet-your-fha{
+    border: 2px solid #6bb445;
+    text-align: center;
+    margin: 0.938em;
+    padding: 0.75em 0.75em 1.74em 0.75em;
+}           
+.meet-your-fha h3{
+    color: #6bb445;
+    text-transform: uppercase;
+    padding: 0.375em 0 0 0;
+}
+.fha-circle{
+    background-color: #6bb445;
+    border-radius: 50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    -khtml-border-radius: 50%;
+    behavior: url("/js/PIE.htc");
+    color: #ffffff;
+    font: 37px "UniversUltraCondensed",Arial,Helvetica,sans-serif;
+    height: 60px;
+    left: 43%;
+    border: 4px solid #ffffff;
+    padding: 9px 19px;
+    position: absolute;
+    top: -6.5%;
+    width: 60px;
+}          
+.fha-assistant{
+    margin: 1.188em 0 0 0.25em;
+}         
+.bottom-modifier{
+	padding: 0 0 45px 0;
+}						
+/*
+/*
+//////// Contact Page Styles //////
+*/
+	
+.pad-bottom{
+	padding: 0 0 130px 0;
+}
+
+
+/*
+//////// Brightcove Video Styles for Wellness Page //////
+*/
+ #BCLcontainingBlock {
+          width: 100%;
+          margin-left:auto;
+          margin-right:auto;
+          margin-bottom: 10px;
+          margin-top: 34px;
+
+        }
+        .BCLvideoWrapper {
+          position: relative;
+          padding-top: 1px;
+          padding-bottom: 56.25%;
+          height: 0;
+        }
+        * html .BCLvideoWrapper {
+          margin-left: 10px;
+          margin-bottom: 10px;
+          margin-right: 10px;
+          margin-top: 10px;
+          width: 640px;
+          height: 360px;
+        }
+        .BCLvideoWrapper div,
+        .BCLvideoWrapper embed,
+        .BCLvideoWrapper object,
+        .BrightcoveExperience {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+        }						
+/*	--------------------------------------------------
+	Reveal Modals
+	-------------------------------------------------- */
+		
+	.reveal-modal-bg { 
+		position: fixed; 
+		height: 100%;
+		width: 100%;
+		background: #000;
+		background: rgba(0,0,0,.8);
+		z-index: 100;
+		display: none;
+		top: 0;
+		left: 0; 
+		}
+	
+	.reveal-modal {
+		visibility: hidden;
+		top: 100px; 
+		left: 50%;
+		margin-left: -300px;
+		width: 520px;
+		background: #eee url('../img/modal-gloss.png') no-repeat -200px -80px;
+		position: absolute;
+		z-index: 101;
+		padding: 30px 40px 34px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+		-moz-box-shadow: 0 0 10px rgba(0,0,0,.4);
+		-webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
+		-box-shadow: 0 0 10px rgba(0,0,0,.4);
+		}
+		
+	.reveal-modal.small 		{ width: 200px; margin-left: -140px;}
+	.reveal-modal.medium 		{ width: 400px; margin-left: -240px;}
+	.reveal-modal.large 		{ width: 600px; margin-left: -340px;}
+	.reveal-modal.xlarge 		{ width: 800px; margin-left: -440px;}
+	
+	.reveal-modal .close-reveal-modal {
+		font-size: 22px;
+		line-height: .5;
+		position: absolute;
+		top: 8px;
+		right: 11px;
+		color: #aaa;
+		text-shadow: 0 -1px 1px rbga(0,0,0,.6);
+		font-weight: bold;
+		cursor: pointer;
+		} 						
+						
+/*
+    ////////////////////////////////////
+  ////////// MEDIA QUERIES //////////
+    //////////////////////////////////
+                                                                                */                          
+
+
+ 
+
+/*
+//////// Mobile Media Query Max Width 320px ///////
+*/  
+@media only screen and (max-device-width: 600px) {
+
+
+
+.fha-program h1, .content_banner h1,.content_banner hr { display:none;}
+
+.image_rotator {
+    top: 1px;
+}
+.orbit-container .orbit-slides-container > * .orbit-caption { 
+		max-width: 93%;
+		top:23em;
+	}
+.image_rotator ul li{
+		height: 364px;
+}
+.orbit-container {
+    padding: 0 0 44px;
+}
+.orbit-bullets {
+    top: 43px;
+}
+
+
+
+
+.orbit-caption h1 {
+  font: 2.5em "UniversUltraCondensed", Arial, Helvetica, sans-serif;
+}
+
+
+.pad-45 img {padding:30px 0 0 0;}
+/*
+//////// Banners ///////
+*/ 
+.content_banner.fha-program {
+    background-image: url("../img/hero_img/heb_fha_mobile_1x.png")!important;
+    height: 11.9em;
+}
+.content_banner.provFinder {
+    background-image: url("../img/hero_img/heb_provfinder_mobile_1x.png")!important;
+    height: 11.9em;
+}
+.content_banner.contactUs {
+    background-image: url("../img/hero_img/heb_contact_mobile_1x.png")!important;
+    height: 11.9em;
+}
+.content_banner.consumer-ed {   
+    background-image:   url('../img/hero_img/heb_healthed_mobile_1x.png')!important;
+    height: 11.9em;
+}
+
+.content_banner.wellness-regist {   
+    background-image: url("../img/hero_img/heb_wheretogo_mobile_1x.png")!important;
+    height: 11.9em;
+}
+.content_banner.take-action {   
+    background-image: url("../img/hero_img/heb-takeaction-mobile-1x.png")!important;
+    height: 11.9em;
+}
+.content_banner.covered {   
+    background-image: url("../img/hero_img/heb-covered-mobile-1x.png")!important;
+    height: 11.9em;
+}
+.content_banner.health_programs { 
+	background:url('../img/hero_img/heb-takeaction-mobile-1x.png') !important; 
+	height: 11.9em;
+	}
+
+
+/*
+//////// Provider Finder Page ///////
+*/    
+
+.provFinder h1 {
+    color: #ffffff;
+    font: 48px "UniversUltraCondensed",Arial,Helvetica,sans-serif;
+    margin: 0 0 -15px;
+    padding: 32px 0 0 141px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.provFinder p {
+    color: #ffffff;
+    margin: -4px 0 0;
+    padding: 0 0 0 121px;
+    text-align: center;
+}
+/*
+//////// Wellness Registration Page ///////
+*/ 
+.connect-with-us {
+    border: 2px solid #e81c31;
+    margin: 1.938em 0.938em;
+    padding: 0.75em;
+    text-align: center;
+}
+.connect-circle {
+    background-color: #e81c31;
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+    color: #ffffff;
+    font: 37px "UniversUltraCondensed",Arial,Helvetica,sans-serif;
+    height: 60px;
+    left: 44%;
+    padding: 9px 19px;
+    position: absolute;
+    top: 1.5%;
+    width: 60px;
+}
+.meet-your-fha {
+    border: 2px solid #6bb445;
+    margin: 0.938em;
+    padding: 0.75em;
+    text-align: center;
+}
+.fha-circle {
+    background-color: #6bb445;
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+    color: #ffffff;
+    font: 37px "UniversUltraCondensed",Arial,Helvetica,sans-serif;
+    height: 60px;
+    left: 44%;
+    padding: 9px 19px;
+    position: absolute;
+    top: -8.5%;
+    width: 60px;
+}
+
+
+.fha-copy{
+    margin: 0 10px 15px 20px;
+}
+
+}
+
+/******************H3 TEXT size for screen size less than 1000px**********************************/
+@media (min-width: 768px) and (max-width: 1000px) {
+	.fhas h3{
+		font: 1.5em "UniversUltraCondensed",Arial,Helvetica,sans-serif;
+	}
+}
+
+@media (min-width: 485px) and (max-width: 675px) {
+	.fhas h3{
+		font: 1.2em "UniversUltraCondensed",Arial,Helvetica,sans-serif;
+	}
+}
+
+
+/*
+//////// Desktop Media Query 768px wide///////
+                                                                            */  
+@media only screen and (max-device-width: 768px) {
+    .colDiv { border-right:1px solid #828282; }
+.fha-copy{
+    margin: 0 10px 15px 20px;
+}
+
+.wellness { background:url('../img/image_rotator/heb-tablet-image-rotator-covered-1x.png') no-repeat top center #F5F5F5 !important; }
+.health_assistant { background:url('../img/image_rotator/HEB_tablet_image_rotator_2_1x.png') no-repeat top center #F5F5F5 !important; }
+.health_programs { background:url('../img/image_rotator/heb-tablet-image-rotator-5-1x.png') no-repeat top center #F5F5F5 !important; }
+ 
+.orbit-container .orbit-slides-container > * .orbit-caption {
+    top: 19em;
+}
+.image_rotator ul li{
+		height: 380px;
+}
+
+		.content_banner.fha-program {	background-image:	url('../img/hero_img/heb_fha_tablet_1x.png'); clear:both; position: relative; top: -4px;}
+		.content_banner.consumer-ed {	background-image:	url('../img/hero_img/heb_healthed_tablet_1x.png');clear:both;position: relative;top: -4px;}
+		.content_banner.provFinder {	background-image:	url('../img/hero_img/heb_provfinder_tablet_1x.png');clear:both;position: relative;top: -4px;}
+		.content_banner.contactUs {	background-image:	url('../img/hero_img/heb_contact_tablet_1x.png');clear:both;position: relative;top: -4px;}
+		.content_banner.take-action {	background-image:	url('../img/hero_img/heb-takeaction-tablet-1x.png');clear:both;position: relative;top: -4px;}
+		.content_banner.covered {	background-image:	url('../img/hero_img/heb-covered-tablet-1x.png');clear:both;position: relative;top: -4px;}
+        .content_banner h1, .content_banner hr{
+			display:none;
+}
+
+
+
+
+/*
+//////// Desktop Media Query 1024px for landscape on Ipad///////
+                                                                             
+@media only screen and (max-width: 1024px) {
+
+
+		.content_banner.fha-program {	background-image:	url('../img/hero_img/heb_fha_tablet_2x.png'); clear:both; position: relative; top: -4px;}
+		.content_banner.consumer-ed {	background-image:	url('../img/hero_img/heb_healthed_tablet_2x.png');clear:both;position: relative;top: -4px;}
+		.content_banner.provFinder {	background-image:	url('../img/hero_img/heb_provfinder_tablet_2x.png');clear:both;position: relative;top: -4px;}
+		.content_banner.contactUs {	background-image:	url('../img/hero_img/heb_contact_tablet_2x.png');clear:both;position: relative;top: -4px;}
+		.content_banner.wellness-regist {	background-image:	url('../img/hero_img/heb_wheretogo_tablet_2x.png');clear:both;position: relative;top: -4px;}
+			
+        .content_banner h1, .content_banner hr{
+			display:none;
+}
+
+*/ 
+
+/*
+//////// Desktop Media Query 800px wide///////
+*/
+
+@media only screen and (max-width: 800px) {
+    .colDiv { border-right:1px solid #828282; }
+
+ .logo_bcbs {
+  margin-bottom: 11px;
+  width: 65%;
+}
+  
+
+}                  
+/*
+//////// Retina Media Query ///////
+/*  max-width 1920px
+*/                              
+                            
+@media only screen and (max-width: 120em), (-webkit-min-device-pixel-ratio: 2),  (min-resolution: 192dpi) {
+    
+        .nav_button { 
+                background-image:url('../img/navIcons@2x.png;');
+                background-size:30px auto; }
+         /*         
+        .content_banner {background-size:1920px 190px;}
+            
+               .content_banner.fha-program {   background-image:   url('../img/hero_img/heb_fha_desktop_2x.png'); }
+                .content_banner.consumer-ed {   background-image:   url('../img/hero_img/heb_healthed_desktop_2x.png'); }
+                .content_banner.provFinder {    background-image:   url('../img/hero_img/heb_provfinder_desktop_2x.png'); }
+                .content_banner.contactUs { background-image:   url('../img/hero_img/heb_contact_desktop_2x.png'); }
+                .content_banner.wellness-regist {   background-image:   url('../img/hero_img/heb_wheretogo_desktop_2x.png'); }
+
+              
+
+        .wellness { background:url('../img/image_rotator/HEB_desktop_image_rotator_1_1x') no-repeat top center #F5F5F5 !important; }
+        .health_assistant { background:url('../img/image_rotator/HEB_desktop_image_rotator_2_1x.png') no-repeat top center #F5F5F5!important; }
+        .health_programs { background:url('../img/image_rotator/HEB_desktop_image_rotator_3_1x.png') no-repeat top center #F5F5F5!important; }
+	*/
+}                            
+
