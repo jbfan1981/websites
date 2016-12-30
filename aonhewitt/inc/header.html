@@ -1,0 +1,98 @@
+<!--Skip Nav-->
+    <a href="#maincontent" class="offscreen">Skip to Main Content</a>
+
+	<div class="off-canvas-wrap" data-offcanvas>
+  		<div class="inner-wrap">
+        
+            <nav class="tab-bar">
+            	<div class="row">
+                    <div class="large-logo-container [ large-3 medium-4 columns ]">
+                        <a href="index.html">
+                          <img title="Blue Cross and Blue Shield of Texas Logo" alt="Blue Cross and Blue Shield of Texas Logo" src="img/bcbstx.svg" />
+                        </a>
+                    </div>
+                    <div class="large-9 medium-8 columns hide-for-small">
+                    	<ul id="mainNav">
+                            <li class="menu_medical">
+                                <a href="medical.html"><img src="img/menuicon_medical.svg" alt="medical coverage icon">
+                                <span class="menu_txt">Medical</span></a>
+                            </li>
+                            <li class="menu_divider"></li>
+                            <li class="menu_prescription-drugs">
+                                <a href="prescription-drugs.html"><img src="img/menuicon_prescription.svg" alt="prescription drug icon">
+                                <span class="menu_txt">Prescription<br />Drugs</span></a></li>
+            								<li class="menu_divider"></li>
+                            <li class="menu_web-mobile-tools">
+                                <a href="web-mobile-tools.html"><img src="img/menuicon_webtools.svg" alt="web and mobile tools icon">
+                                <span class="menu_txt">Web &amp;<br />Mobile Tools</span></a></li>
+            								<li class="menu_divider"></li>
+                            <li class="menu_find-doctor-hospital">
+                                <a href="find-doctor-hospital.html"><img src="img/menuicon_finddr.svg" alt="find a doctor or hospital icon">
+                                <span class="menu_txt">Find A Doctor<br />or Hospital</span></a></li>
+           								  <li class="menu_divider"></li>
+                            <li class="menu_contact-us">
+                            		<a href="contact-us.html"><img src="img/menuicon_contact.svg" alt="contact us icon">
+                                <span class="menu_txt">Contact Us</span></a>
+                            </li>
+                        </ul>
+                        
+                        <!--Skip Nav-->
+    					<a href="/bam-login" class="offscreen">Log into Blue Access for Members</a>
+                    </div> 
+                    
+                    
+                                       
+                    <section class="show-for-small right-small">
+                        <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+                    </section>
+                </div>
+            </nav>
+            
+            <!--Bam Login-->
+            <div class="row hide-for-small" id="bam-container">
+                <div class="large-offset-8 large-4 columns">
+                		<div id="bam-login-top"></div>
+                    <div id="bam-login"><img src="img/bam_login_white.svg" alt="" /></div>
+                    
+                     <div class="row" id="bam-form">
+                        <div class="large-12 columns">
+                            <form method="post" name="LoginInfoForm" action="" id="BamLogin">
+
+                                <label>User Name:
+                                <input type="text" name="userName" tabindex="1" maxlength="50"></label>
+
+                                <label>Password:
+                                <input type="password" name="password" tabindex="2" maxlength="50"></label>
+
+                                <input class="button" type="submit" value="LOG IN" tabindex="3" onclick="submitBam();"
+                                       title="Log In"
+                                       alt="Log In"
+                                       class="button-blue">
+                            </form>
+                        
+                            <p class="login-link">&rsaquo; New User? <a href="/member/register">Register Now</a></p>
+
+                            <p class="login-link">&rsaquo; Forgot <a  onclick="window.location.href='https://members.hcsc.net/wps/PA_BAMLogin/bamGateway?corpEntCode=TX1&cmdAction=findUsername'"><span>user name</span> </a> or <a  onclick="window.location.href='https://members.hcsc.net/wps/PA_BAMLogin/bamGateway?corpEntCode=TX1&cmdAction=resetPassword'">password</a>?</p>
+
+                            <p class="login-link">&rsaquo; Take a <a href="/mmedia/bamtrailer/bam.htm">tour</a>.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>              
+                     
+	
+            <!-----Offcanvas Menu----->  
+            <aside class="right-off-canvas-menu">
+                <ul class="off-canvas-list">
+                	<li><label>Aon Hewitt</label></li>
+                  	<li class="bam_login"><a href="bam-login.html"><img src="img/bam_logo.svg" alt="Log in to Blue Access for Members" /></a></li>
+                    <li class="menu_medical"><a href="medical.html"><img src="img/menuicon_medical.svg" alt="medical coverage icon">Medical</a></li>
+                    <li class="menu_prescription-drugs"><a href="prescription-drugs.html"><img src="img/menuicon_prescription.svg" alt="prescription drug icon">Prescription Drugs</a></li>
+                    <li class="menu_web-mobile-tools"><a href="web-mobile-tools.html"><img src="img/menuicon_webtools.svg" alt="web and mobile tools icon">Web &amp; Mobile Tools</a></li>
+                    <li class="menu_find-doctor-hospital"><a href="find-doctor-hospital.html"><img src="img/menuicon_finddr.svg" alt="find a doctor or hospital icon">Find a Doctor or Hospital</a></li>
+                    <li class="menu_contact-us"><a href="contact-us.html"><img src="img/menuicon_contact.svg" alt="contact us icon">Contact Us</a></li>
+                    
+                </ul>                             
+            </aside>
+    		<!-----End Offcanvas Menu-----> 
