@@ -1,0 +1,1593 @@
+/* ----------------------------------------------------
+	Aon Hewitt REDESIGN
+
+	* Description.......: BCBS-AON HEWITT Microsite Styles
+	* Created by........: Anthony Cain and De'Von Favors
+	* Modified by.......: Anthony Cain and De'Von Favors
+	* Created...........: 07/31/2015
+	* Version...........: 1.1
+
+---------------------------------------------------- */
+
+@charset "UTF-8";
+
+/* Webfont: Univers-Condensed */
+@font-face {
+    font-family: 'UniversCondensed';
+    src: url('fonts/Univers-Condensed.eot'); /* IE9 Compat Modes */
+    src: url('fonts/Univers-Condensed.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/Univers-Condensed.woff') format('woff'), /* Modern Browsers */
+         url('fonts/Univers-Condensed.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/Univers-Condensed.svg#Univers-Condensed') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Univers-CondensedBold */
+@font-face {
+    font-family: 'UniversCondensedBold';
+    src: url('fonts/Univers-CondensedBold.eot'); /* IE9 Compat Modes */
+    src: url('fonts/Univers-CondensedBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/Univers-CondensedBold.woff') format('woff'), /* Modern Browsers */
+         url('fonts/Univers-CondensedBold.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/Univers-CondensedBold.svg#Univers-CondensedBold') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Univers-Light */
+@font-face {
+    font-family: 'UniversLight';
+    src: url('fonts/Univers-Light.eot'); /* IE9 Compat Modes */
+    src: url('fonts/Univers-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/Univers-Light.woff') format('woff'), /* Modern Browsers */
+         url('fonts/Univers-Light.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/Univers-Light.svg#Univers-Light') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Univers-LightUltraCondensed */
+@font-face {
+    font-family: 'UniversLightUltraCondensed';
+    src: url('fonts/Univers-LightUltraCondensed.eot'); /* IE9 Compat Modes */
+    src: url('fonts/Univers-LightUltraCondensed.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/Univers-LightUltraCondensed.woff') format('woff'), /* Modern Browsers */
+         url('fonts/Univers-LightUltraCondensed.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/Univers-LightUltraCondensed.svg#Univers-LightUltraCondensed') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Univers-UltraCondensed */
+@font-face {
+    font-family: 'UniversUltraCondensed';
+    src: url('fonts/Univers-UltraCondensed.eot'); /* IE9 Compat Modes */
+    src: url('fontsUnivers-UltraCondensed.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/Univers-UltraCondensed.woff') format('woff'), /* Modern Browsers */
+         url('fonts/Univers-UltraCondensed.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/Univers-UltraCondensed.svg#Univers-UltraCondensed') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+
+/*****CSS Reset*****/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-family: sans-serif;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {font-family:Arial, sans-serif;}
+
+p {font-size:.85em; color:#666;}
+
+p + p {margin-top:20px;}
+
+a {color:#004b91; text-decoration:underline;}
+	a:hover {color:#008dd5; text-decoration:none;}
+	a.phoneLink, a.phoneLink:hover, a.phoneLink:active, a.phoneLink:visited, a.iconLink {color:#004b91; text-decoration:none; cursor:default;}
+	
+	.anchortag{
+		 display:block;
+		 height:90px; /* this is the height of your header */
+		 margin-top:-90px; /* this is again negative value of the height of your header */
+		 visibility:hidden;
+		}
+
+ul {
+	font-size:.85em; 
+	color:#666;
+	margin:15px 25px;
+}
+
+ul li ul {margin:5px 20px;; list-style:none; font-size:1em;}
+ul li ul li:before {content:"-"; position:relative;left:-5px;}
+ul li ul li { text-indent:-5px;}
+
+h1, h2, h3, h4, h5, h6, h7 { font-family:'UniversUltraCondensed', Arial, sans-serif;}
+
+a.offscreen { 
+position:absolute;
+left:-1000px;
+top:-1000px;
+width:1px;
+height:1px;
+text-align: left; 
+overflow:hidden;
+} 
+a.offscreen:focus, a.offscreen:active, a.offscreen:hover { 
+position:absolute; 
+left:0; 
+top:0; 
+width:auto; 
+height:auto; 
+overflow:visible;
+background-color:#FF3;
+border: 1px dotted #000;
+} 
+
+sup { vertical-align: top; font-size: 0.6em; }
+
+.row {max-width:960px;}
+
+.fullWidth {
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: initial;
+}
+
+.bucket-content {
+   /*margin-bottom: 20px;*/
+    min-height: 100px;
+}
+
+/****Banners****/
+.module.parallax-1 {
+ /*
+  background-image:url(../img/aon_homepage_banner.jpg);
+ 
+  max-width:1920px;
+  max-height:625px;
+  */
+}
+.orbit-container {
+	z-index:1;	
+}
+
+	.index .orbit-container {margin-top:-69px;}
+	.index .orbit-container ul li {height:600px;}
+	.index .orbit-container ul li div {background-size:100%;}
+	.index .orbit-bullets-container {margin:20px 0 0 0;}
+	
+.orbit-container .orbit-slides-container {
+	margin-bottom:-150px;	
+}
+
+.orbit-bullets {
+    margin: 0 auto 5px;
+    padding-top: 20px;
+}
+
+	.orbit-bullets li.active {
+    background: #59aedb none repeat scroll 0 0;
+	}
+
+.covered-banner-container {
+		border: 1px solid white;
+    height: 400px;
+    position: relative;
+    top: -200px;
+    width: 100%;
+		z-index:2
+}
+.covered-banner { 
+	background-color:rgba(0,65,125,.9);
+    background-position: 50% 50%;
+	color:#fff; 
+	height:170px;
+	width:70%; 
+	max-width: 960px;
+	padding:1em; 
+	z-index:1;
+	margin-left: auto; 
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	position:relative;
+	top:-100px;
+}
+
+.covered-banner p {margin:0px; padding:0px 0px 10px; font-size:.9em; font-family:'Univers', Arial,sans-serif; line-height:1.4em; color:#fff;}
+
+.covered-banner .button {
+	background-color:transparent;
+	border:1px solid #fff;
+	width:100%;	
+}
+
+.covered-banner .button:hover {
+	transition:1s;
+	background-color:#fff;
+	color:#00417d;	
+}
+
+.covered-banner h1, .covered-banner h2 {
+	color:#fff;
+    font-family: 'UniversUltraCondensed',Arial,san-serif;
+	text-transform:uppercase;
+	font-weight:bold;	
+}
+
+.textfill {
+	width: 100%;
+	height: 200px;
+	font-size: 100%;
+	text-align: center;
+	text-transform:uppercase;
+}
+
+.module.content {
+  padding: 40px 0;
+}
+
+.module.parallax {
+  height: 625px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /*background-size: cover;*/
+}
+
+.module.parallax-subpage {
+  height: 340px;
+  background-position: center 70px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /*background-size: cover;*/
+  color:#fff;
+  padding-top:165px;
+}
+
+/*****Header****/
+
+.large-logo-container {padding-top:17px;}
+
+.header-nav {
+	border-top:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+	height:auto;
+	position:fixed;
+	z-index:1;
+	background-image:url(../img/header_bg.png);
+	background-repeat:repeat;	
+}
+
+
+.tab-bar {
+	border-top:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+	height:70px;
+	position:fixed;
+	z-index:100;
+	background-color:rgba(255,255,255,.8);	
+	width:100%;
+}	
+
+
+ul#mainNav {
+	text-transform:uppercase;
+	height:100%;
+	float:right;
+	margin:0;
+}
+#mainNav a {
+		display:block;
+		height:100%;
+		width:100%;
+		vertical-align:middle;
+		color:#555;
+		font-size:12px;
+		text-decoration:none;
+		font-weight:normal;
+		padding: 15px 12px 0 12px;
+}
+	#mainNav a img {display:inline-block;vertical-align:middle;}
+	#mainNav a .menu_txt {
+		display: inline-block;
+    font-family: "UniversCondensedBold",Arial,san-serif;
+    line-height: 14px;
+    margin-left: 3px;
+    vertical-align: middle;
+		}
+
+#mainNav li {
+	margin:0 1px;
+	display:inline;	
+	float:left;
+	font-family:inherit;
+	height:100%;
+	font-weight:bold;
+	}
+	
+#mainNav li:hover, #mainNav li.active{
+	cursor:pointer;
+	background: -moz-linear-gradient(top,  rgba(194,212,229,1) 0%, rgba(255,255,255,0) 41%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(194,212,229,1)), color-stop(41%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(194,212,229,1) 0%,rgba(255,255,255,0) 41%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(194,212,229,1) 0%,rgba(255,255,255,0) 41%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(194,212,229,1) 0%,rgba(255,255,255,0) 41%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(194,212,229,1) 0%,rgba(255,255,255,0) 41%); /* W3C */
+	}
+
+		#mainNav li.menu_divider {
+			background: #d5dff1 none repeat scroll 0 0;
+			height: 35px;
+			margin: 12px 1px 0;
+			padding: 0;
+			width: 1px;
+			}
+			
+			#mainNav li.menu_divider:hover {
+				background: #d5dff1 none repeat scroll 0 0;
+				cursor:default;
+				}
+
+/*************Main Content****************/
+
+#alert-box {
+	padding:20px;
+	margin:0 0 30px 0;
+
+		background: rgb(250,250,250); /* Old browsers */		
+		background: -moz-linear-gradient(top,  rgba(250,250,250,1) 0%, rgba(239,239,239,1) 76%); /* FF3.6+ */	
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(250,250,250,1)), color-stop(76%,rgba(239,239,239,1))); /* Chrome,Safari4+ */		
+		background: -webkit-linear-gradient(top,  rgba(250,250,250,1) 0%,rgba(239,239,239,1) 76%); /* Chrome10+,Safari5.1+ */		
+		background: -o-linear-gradient(top,  rgba(250,250,250,1) 0%,rgba(239,239,239,1) 76%); /* Opera 11.10+ */		
+		background: -ms-linear-gradient(top,  rgba(250,250,250,1) 0%,rgba(239,239,239,1) 76%); /* IE10+ */		
+		background: linear-gradient(to bottom,  rgba(250,250,250,1) 0%,rgba(239,239,239,1) 76%); /* W3C */
+	}
+	
+#alert-callout {color:#b48219; font-size:1.85em; font-weight:lighter;line-height:1em;}
+#alert-callout span {text-transform:uppercase; font-size:1.2em;font-family:'UniversLightUltraCondensed', Arial, sans-serif;}
+#alert-callout img {max-width:40px;}
+
+#callout-sections {text-align:center; font-size:.9em;}
+
+.callout_div {width:30%;margin:0 1%;display:inline-block;vertical-align:top;}
+	
+	.callout_div img {width:50%;
+		transition: all .3s ease-in-out;
+			-webkit-transition: all .3s ease-in-out;
+			-moz-transition: all .3s ease-in-out;
+	}
+
+	.callout_div:hover img {
+		transform: scale(1.1);
+			-webkit-transform: scale(1.1);
+			-moz-transform: scale(1.1);
+	}
+
+#callout-sections a {text-decoration:none;}
+#callout-sections h3 {text-transform:uppercase; font-size:28px;line-height:1em;margin-top:15px;}
+#callout-sections .button {background-color:#fff; width:100%; color:#004b91; border:1px solid #004b91; text-transform:uppercase; font-size:12px; padding-left:1rem; padding-right:1rem; margin: 20px 0px;}
+#callout-sections .button:hover {transition:1s; background-color:#004b91 !important; color:#fff; border:1px solid #fff;}
+
+#bva-header {color:#1a98ad;}
+#find-doc-header {color:#68ad18;}
+#rx-header {color:#b48219;}
+
+.scale-transition {
+	-webkit-transform: scale(1.1); 
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1); 
+	transition:1s;
+}
+.descale-transition {
+	-webkit-transform: scale(1); 
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); 
+	transition:1s;
+}
+
+
+.main-section{
+	margin-top:70px;
+	}
+
+  /*----------Blue Title Bar-----------*/
+	
+	.bluetitle,
+	.graphic_section {
+		width: 100%;
+		position: relative;
+		padding:5.75% 0;
+		}
+		.content_page .bluetitle {
+				min-height: 150px;
+				padding-top: 5%;
+				}
+		.graphic_section{ padding-bottom:3%;}
+			.web_tools .graphic_section {padding-top:0;}
+			
+			.bluetitle.module.parallax{ 
+				background-attachment:fixed;
+				height:auto;
+				background-repeat:no-repeat;
+				background-position:20% 4%;
+				}
+		
+		
+			.bluetitle {
+				overflow:hidden;
+				}
+				
+				.medical_coverage .bluetitle {background-image:url(../img/aon_medical_img.png);}
+				.prescription_drugs .bluetitle {background-image:url(../img/aon_drugs_img.png);}
+				.web_tools .bluetitle {background-image:url(../img/aon_tools_img.png);}
+				.find_doctor .bluetitle {background-image:url(../img/aon_finddr_img.png);}
+				.contact_us .bluetitle {background-image:url(../img/aon_contact_img.png);}
+				.advantages_membership .bluetitle {background-image:url(../img/aon_member_img.png);background-position:20% 10% !important;}
+				
+			.bluetitle:before,
+			.bluetitle:after {
+				content: '';
+				position:absolute;
+				top:0;
+				bottom:0;
+				left:0;
+				right:49.9%;
+				margin-top:-2.5%;
+				margin-bottom:2.5%;
+				background: #004b91;
+				transform: skew(0deg, 5deg);
+				-webkit-transform: skew(0deg, 5deg);
+				z-index: -1;
+				overflow:hidden;
+				}
+			
+			.bluetitle:after {
+				left:50%;
+				right: 0;
+				transform:skew(0deg, -5deg);
+				-webkit-transform:skew(0deg, -5deg);
+				}
+				
+				
+				.bluetitle h1 {
+					font-family:'UniversLightUltraCondensed', Arial, sans-serif;
+					color:white;
+					color:rgba(255, 255, 255,.75);
+					font-size:5em;
+					margin:20px 0 0 0;
+					font-weight:normal;
+					line-height:.85em;
+					text-transform:uppercase;
+					}
+					
+					
+					.content_page .bluetitle h1 { font-size:3.1em; text-transform:none; font-weight:normal;}
+					
+				.bluetitle hr {
+					border-color:rgba(255,255,255,.5);
+					margin:0 0 0 -25px;;
+					}
+					
+					.content_page .bluetitle hr {margin:0;}
+					
+				.bluetitle p {
+					color:rgba(255, 255, 255,.85);
+					line-height:1.15em;
+					margin:5px 0 10px 0;
+					}
+				
+
+  /*----------Graphic Section-----------*/
+			.graphic_section {
+				position:relative;
+				z-index:4;
+				margin-top:-2.5%;
+				padding-bottom:50px;
+				background: rgb(255,255,255); /* Old browsers */
+					background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(229,229,229,1) 30%); /* FF3.6+ */
+					background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(30%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+					background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 30%); /* Chrome10+,Safari5.1+ */
+					background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 30%); /* Opera 11.10+ */
+					background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 30%); /* IE10+ */
+					background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 30%); /* W3C */
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+				}
+				
+			.covered-banner-container:before,
+			.covered-banner-container:after,
+			.graphic_section:before,
+			.graphic_section:after {
+				content: '';
+				position:absolute;
+				top:0;
+				bottom:0;
+				left:0;
+				right: 49.9%;
+				margin-top:-2.5%;
+				margin-bottom:-2.5%;
+				transform: skew(0deg, 5deg);
+				-webkit-transform: skew(0deg, 5deg);
+				z-index: -1;
+				overflow:hidden;
+				background-repeat:no-repeat;
+				}
+					
+			.covered-banner-container:after,
+			.graphic_section:after {
+					left:50%;
+					right: 0;
+					transform: skew(0deg, -5deg);
+					-webkit-transform: skew(0deg, -5deg);
+					}
+					
+			.second_graphic_section {margin-top:0 !important;}
+					
+			.second_graphic_section:before, .second_graphic_section:after {transform:skew(0,0) !important; -webkit-transform:skew(0,0) !important;margin:0;}
+				
+			.medical_coverage .graphic_section:before {
+				background-image:url(../img/doctor_exam_lft.png), rgb(255,255,255);
+				background-image:url(../img/doctor_exam_lft.png), -moz-linear-gradient(top,  rgba(255,255,255,1) 50%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+				background-image:url(../img/doctor_exam_lft.png), -webkit-gradient(linear, left top, left bottom, color-stop(50%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+				background-image:url(../img/doctor_exam_lft.png), -webkit-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+				background-image:url(../img/doctor_exam_lft.png), -o-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+				background-image:url(../img/doctor_exam_lft.png), -ms-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* IE10+ */
+				background-image:url(../img/doctor_exam_lft.png), linear-gradient(to bottom,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* W3C */
+				
+				background-position: right -81px;
+				}
+				
+			.medical_coverage .graphic_section:after {
+				
+				background-image:url(../img/doctor_exam_rt.png), rgb(255,255,255);
+				background-image:url(../img/doctor_exam_rt.png), -moz-linear-gradient(top,  rgba(255,255,255,1) 50%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+				background-image:url(../img/doctor_exam_rt.png), -webkit-gradient(linear, left top, left bottom, color-stop(50%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+				background-image:url(../img/doctor_exam_rt.png), -webkit-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+				background-image:url(../img/doctor_exam_rt.png), -o-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+				background-image:url(../img/doctor_exam_rt.png), -ms-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* IE10+ */
+				background-image:url(../img/doctor_exam_rt.png), linear-gradient(to bottom,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* W3C */
+				
+				
+				background-position: left -70px;
+				}
+				
+				
+			.prescription_drugs .graphic_section:before {
+				background-image:url(../img/pharmacist_lft.png), rgb(255,255,255);
+				background-image:url(../img/pharmacist_lft.png), -moz-linear-gradient(top,  rgba(255,255,255,1) 50%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+				background-image:url(../img/pharmacist_lft.png), -webkit-gradient(linear, left top, left bottom, color-stop(50%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+				background-image:url(../img/pharmacist_lft.png), -webkit-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+				background-image:url(../img/pharmacist_lft.png), -o-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+				background-image:url(../img/pharmacist_lft.png), -ms-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* IE10+ */
+				background-image:url(../img/pharmacist_lft.png), linear-gradient(to bottom,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* W3C */
+				
+				background-position: right -81px;
+				}
+				
+			.prescription_drugs .graphic_section:after {
+				background-image:url(../img/pharmacist_rt.png), rgb(255,255,255);
+				background-image:url(../img/pharmacist_rt.png), -moz-linear-gradient(top,  rgba(255,255,255,1) 50%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+				background-image:url(../img/pharmacist_rt.png), -webkit-gradient(linear, left top, left bottom, color-stop(50%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+				background-image:url(../img/pharmacist_rt.png), -webkit-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+				background-image:url(../img/pharmacist_rt.png), -o-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+				background-image:url(../img/pharmacist_rt.png), -ms-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* IE10+ */
+				background-image:url(../img/pharmacist_rt.png), linear-gradient(to bottom,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* W3C */
+	
+				background-position: left -74px;
+				}
+				
+				
+				.find_doctor .graphic_section:before {
+					background-image:url(../img/finddr_lft.png), rgb(255,255,255);
+					background-image:url(../img/finddr_lft.png), -moz-linear-gradient(top,  rgba(255,255,255,1) 50%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+					background-image:url(../img/finddr_lft.png), -webkit-gradient(linear, left top, left bottom, color-stop(50%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+					background-image:url(../img/finddr_lft.png), -webkit-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+					background-image:url(../img/finddr_lft.png), -o-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+					background-image:url(../img/finddr_lft.png), -ms-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* IE10+ */
+					background-image:url(../img/finddr_lft.png), linear-gradient(to bottom,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* W3C */
+					
+					background-position: right -94px;
+					}
+				
+			.find_doctor .graphic_section:after {
+					background-image:url(../img/finddr_rt.png), rgb(255,255,255);
+					background-image:url(../img/finddr_rt.png), -moz-linear-gradient(top,  rgba(255,255,255,1) 50%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+					background-image:url(../img/finddr_rt.png), -webkit-gradient(linear, left top, left bottom, color-stop(50%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+					background-image:url(../img/finddr_rt.png), -webkit-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+					background-image:url(../img/finddr_rt.png), -o-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+					background-image:url(../img/finddr_rt.png), -ms-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* IE10+ */
+					background-image:url(../img/finddr_rt.png), linear-gradient(to bottom,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* W3C */
+		
+					background-position: left -74px;
+					}
+					
+				
+				.advantages_membership .graphic_section:before {
+						background-image:url(../img/drs_chart_lft.png), rgb(255,255,255);
+						background-image:url(../img/drs_chart_lft.png), -moz-linear-gradient(top,  rgba(255,255,255,1) 50%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+						background-image:url(../img/drs_chart_lft.png), -webkit-gradient(linear, left top, left bottom, color-stop(50%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+						background-image:url(../img/drs_chart_lft.png), -webkit-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+						background-image:url(../img/drs_chart_lft.png), -o-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+						background-image:url(../img/drs_chart_lft.png), -ms-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* IE10+ */
+						background-image:url(../img/drs_chart_lft.png), linear-gradient(to bottom,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* W3C */
+						
+						background-position: right -92px;
+					}
+				
+			.advantages_membership .graphic_section:after {
+					background-image:url(../img/drs_chart_rt.png), rgb(255,255,255);
+					background-image:url(../img/drs_chart_rt.png), -moz-linear-gradient(top,  rgba(255,255,255,1) 50%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+					background-image:url(../img/drs_chart_rt.png), -webkit-gradient(linear, left top, left bottom, color-stop(50%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+					background-image:url(../img/drs_chart_rt.png), -webkit-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+					background-image:url(../img/drs_chart_rt.png), -o-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+					background-image:url(../img/drs_chart_rt.png), -ms-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* IE10+ */
+					background-image:url(../img/drs_chart_rt.png), linear-gradient(to bottom,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* W3C */
+		
+					background-position: left -74px;
+					}
+					
+			
+			.web_tools .graphic_section:before,
+			.web_tools .graphic_section:after,		
+			.contact_us .graphic_section:before,
+			.contact_us .graphic_section:after {
+					background-image:rgb(255,255,255);
+					background-image:-moz-linear-gradient(top,  rgba(255,255,255,1) 50%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+					background-image:-webkit-gradient(linear, left top, left bottom, color-stop(50%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+					background-image:-webkit-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+					background-image:-o-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+					background-image:-ms-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* IE10+ */
+					background-image:linear-gradient(to bottom,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* W3C */
+					}
+					
+			.covered-banner-container:before,
+			.covered-banner-container:after {background:white;}
+				
+			span.bold_gray,
+			span.bold_blue {
+				font-size:1.15em;
+				font-weight:bold;
+				line-height:1em;
+				}
+				span.bold_gray {color:#777;}	
+				span.bold_blue {color:#004b91;}	
+				
+			.medical_coverage .graphic_section_1 {margin-bottom:100px;}
+			
+			.prescription_drugs .graphic_section_1 {margin-bottom:40px;}
+			
+				.find_doctor .graphic_section_2 {padding-top:400px;}
+			
+			.advantages_membership .graphic_section_1 {margin-bottom:90px;}
+				 
+				 
+			.graphic_section h2, h3 { margin-bottom:-10px;line-height:2.5em;}
+					span.lg_blue {
+						font-family:'UniversLightUltraCondensed', Arial, sans-serif;
+						font-size:4em;
+						color:#004b91;
+						text-transform:uppercase;
+					}
+					span.lg_gray {
+						font-family:'UniversUltraCondensed', Arial, sans-serif;
+						font-size:4.1em;
+						color:#777;
+						text-transform:uppercase;
+					}
+					
+					.prescription_drugs .graphic_section span.stacked_gray {
+						color: #777;
+						display: inline-block;
+						font-size: 100%;
+						height: 55px;
+						line-height: 1.35em;
+						margin: auto;
+						overflow: visible;
+						position: relative;
+						text-align: center;
+						text-transform: uppercase;
+						vertical-align: baseline;
+						width: 95px;
+						}	
+						
+						.prescription_drugs .graphic_section span.stacked_gray span {font-family:'UniversLightUltraCondensed', Arial, sans-serif;}
+						.prescription_drugs .graphic_section span.stacked_gray span.stacked_top {font-size:27px;line-height:.65em;}
+						.prescription_drugs .graphic_section span.stacked_gray span.stacked_bottom {font-size:33px;}
+								
+					h3 {
+						font-size:.75em;
+						line-height: 2.75em;
+    				margin-bottom: 0;
+						}
+					
+					.vertical_title_txt {
+							position: relative;
+    					top: -11px;
+							display:inline-block;
+							transform: rotate(-90deg);
+							-webkit-transform: rotate(-90deg);
+							font-family:'UniversLightUltraCondensed', Arial, sans-serif;
+							font-size:.44em;
+							color:#777;
+							margin:0px -11px 0 -15px;
+							}
+							
+							.prescription_drugs .vertical_title_txt {top:-9px;margin:0 -7px;font-size:2.32em;}
+				
+				.bam_logo {width:85%;}			
+							
+							
+				.graphic_section_2 img,
+				.graphic_section_3 img  {box-shadow:0 0 15px #FFF;}		
+				
+					#providerFinderVideo:hover {cursor:pointer;}
+				
+				.graphic_section_3 img {margin-top:35px; cursor:pointer;}	
+				
+				.section_2_content {padding-top:25px;}
+				.graphic_section_3 {margin-top:35px;}
+				
+				.subhead {font-size:1em; font-weight:bold; color:#004b91;}
+				
+					.states {text-align:center; position:relative; width:30%; float:left; margin-bottom:15px;}
+						.states img {box-shadow:none;margin-top:0;position:relative;}
+						
+						.statename {
+							margin:0 0 -25px 0;
+							max-width: 0;
+							height:35px;
+							overflow: hidden;
+							position:relative;
+							top:45px;
+							left:50px;
+							z-index:5;
+							text-align:center;
+							}
+							
+						.statename_content {
+							width:100%;
+							overflow:hidden;
+							text-align:center;
+							white-space:nowrap;
+							position:relative;
+
+								background: -moz-linear-gradient(left,  rgba(41,150,209,1) 0%, rgba(41,150,209,0.98) 1%, rgba(255,255,255,0.75) 30%, rgba(255,255,255,0.75) 70%, rgba(125,185,232,1) 100%); /* FF3.6+ */
+								background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(41,150,209,1)), color-stop(1%,rgba(41,150,209,0.98)), color-stop(30%,rgba(255,255,255,0.75)), color-stop(70%,rgba(255,255,255,0.75)), color-stop(100%,rgba(125,185,232,1))); /* Chrome,Safari4+ */
+								background: -webkit-linear-gradient(left,  rgba(41,150,209,1) 0%,rgba(41,150,209,0.98) 1%,rgba(255,255,255,0.75) 30%,rgba(255,255,255,0.75) 70%,rgba(125,185,232,1) 100%); /* Chrome10+,Safari5.1+ */
+								background: -o-linear-gradient(left,  rgba(41,150,209,1) 0%,rgba(41,150,209,0.98) 1%,rgba(255,255,255,0.75) 30%,rgba(255,255,255,0.75) 70%,rgba(125,185,232,1) 100%); /* Opera 11.10+ */
+								background: -ms-linear-gradient(left,  rgba(41,150,209,1) 0%,rgba(41,150,209,0.98) 1%,rgba(255,255,255,0.75) 30%,rgba(255,255,255,0.75) 70%,rgba(125,185,232,1) 100%); /* IE10+ */
+								background: linear-gradient(to right,  rgba(41,150,209,1) 0%,rgba(41,150,209,0.98) 1%,rgba(255,255,255,0.75) 30%,rgba(255,255,255,0.75) 70%,rgba(125,185,232,1) 100%); /* W3C */
+							}
+							
+								.statename_content p {
+									font-family:'UniversUltraCondensed', Arial, sans-serif;
+									color:#004b91;
+									font-size:1.1em;
+									line-height:1em;
+									text-transform:uppercase;
+									padding-top:5px;
+								}
+								
+								
+						.states:hover {cursor:pointer;}
+							
+						.states:hover .statename {
+							max-width: 100%;
+							margin:0 -50px -25px -50px;
+    					transition: max-width .5s ease-in, margin .5s ease-in;
+							}
+
+  /*----------Content Section-----------*/
+	
+	
+			hr.section_divider {
+				height:20px;
+				background:url(../img/section_divider.svg) no-repeat top center transparent;
+				}
+				
+				
+			.content_section {
+				background:#FFF;
+				position:relative;
+				z-index:5;
+				margin-top:-2.5%
+				}
+				
+				.content_page .content_section {background:none; margin-top:2.5%;}
+				
+			.content_row {background:url(../img/vert_div.png) repeat-y top center	transparent;}
+			
+			.content_section h2,
+			.content_section h4,
+			.web_tools .graphic_section h3 {
+				font-family:'UniversUltraCondensed', Arial, sans-serif;
+				color:#777;
+				font-size:1.75em;
+				line-height:1em;
+				text-transform:uppercase;
+				margin-bottom:10px;
+				}
+				
+				.content_section .icon_container {
+					display:inline-block;
+					vertical-align:top;
+					width:22%;
+				}
+					.content_section .icon_container img {
+						width:100%;
+						}
+				
+				.content_section .copy{
+					display:inline-block;
+					padding:0 25px 0 0;
+					width:75%;
+				}
+				
+			.disclaimer { font-size:.65em; font-style:italic; line-height:1.5em; color:#888;}
+				.disclaimer_wide {padding:0 10%;}
+			
+			.callout {
+				background-color: #fff;
+				border-left: 1px solid #ccc;
+				padding: .75em 0 .75em 1.5em ;
+				position: relative;
+				margin:25px 0;
+			}
+			
+				.callout:before {
+					background: none;
+					border-left: 8px solid #004b91;
+					content: "";
+					display: block;
+					position: absolute;
+					top: 0;
+					left: 1px;
+					right: 0;
+					bottom: 0;
+					pointer-events: none;
+					}
+					
+					.callout p strong {font-size:.85em;}
+					.callout p {line-height:1.3em;}
+					
+					.lg_phone {
+						font-family:'UniversLightUltraCondensed', Arial, sans-serif;
+						font-size:3em;
+						color:#004b91;
+						line-height:1em;
+						}
+						
+						.lg_phone a{font-family:'UniversLightUltraCondensed', Arial, sans-serif;}
+						
+			/*----- CONTACT US PAGE -----*/
+					.contact_top {margin-top:-25px;}
+					.contact_btm {padding:20px 0 35px 0;}
+			
+					.contact_labels p,
+					.contact_numbers p,
+					.contact_numbers p a,
+					.contact_numbers .bold_blue > a,
+					.lg_phone .bold_blue > a {
+						font-family:'UniversLightUltraCondensed', Arial, sans-serif;
+						font-weight:normal;
+						text-transform:uppercase;
+						line-height: 0.5em;
+						}
+					
+					.contact_numbers span.bold_blue {
+						font-size:inherit;
+						line-height:inherit;
+						font-weight:inherit;	
+					}
+					
+					.contact_labels p{
+						color:#777;
+						font-size:3em;
+						text-align:right;
+						padding-top: 10px;
+						}
+			
+					.contact_numbers p {
+						color:#004b91;
+						font-size:4em;
+						text-align:left;
+						}
+			
+						.contact_numbers p span.contact_hours {
+							color:#777;
+							font-size:.2em;
+							position:relative;
+							top:-15px;
+							}
+							
+						.tools_section_head h2 {font-size:16px !important;line-height: 2.5em;margin-bottom: -10px;}
+						
+						.tools_section_head + .row {position:relative;top:-20px;}
+						p.tools_desc {
+							text-align:right;
+							position:relative;
+							top:20px;
+							color:#004b91;
+							font-family:'UniversCondensed', Arial, sans-serif;
+							text-transform:uppercase;
+							font-size:1.1em;
+							}
+						p.tools_img {text-align:center;}
+						.img_2row {margin-right:50px;}
+						#wellOnTargetVideo {cursor:pointer;}
+						
+						.contact_numbers a, .lg_phone a {text-decoration:none;}
+						
+						/*----- Tools Orbit Slider Styles -----*/
+						
+						div.web_tools_orbit_info {width:33%;margin-left:3%;}
+						.web_tools_orbit_container {margin-top:-20px;}
+						.web_tools_orbit_container .orbit-container {margin-bottom:-80px;}
+						.orbit-timer {display:none;}
+						
+						.web_tools_orbit_container .orbit-bullets-container {
+							float: right;
+							position: relative;
+							text-align: right;
+							top: -550px;
+							width: 25%;
+							}
+								.web_tools_orbit_container .orbit-bullets-container ol {float:right;height:25px;}
+								
+								.web_tools_orbit_container .orbit-bullets {
+										margin:0;
+										padding-top:0;
+								}
+						
+						ul.web_tools_orbit { margin-bottom:0 !important; }
+						ul.web_tools_orbit li{ min-height:550px; background-size:65% !important;}
+								
+								ul.web_tools_orbit li.bcbsapp {background:url('../img/bcbs_app_bkg.png') no-repeat top right transparent;}
+								ul.web_tools_orbit li.centeredapp {background:url('../img/centered_app_bkg.png') no-repeat top right transparent;}
+								ul.web_tools_orbit li.healthyfamapp {background:url('../img/hf_app_bkg.png') no-repeat top right transparent;}
+						
+						ul.web_tools_orbit li div.web_tools_orbit_info h3 {font-family:'UniversLightUltraCondensed', Arial, sans-serif; font-size:3em; color:#555;}
+												
+						p.available_os {font-family:'UniversCondensed', Arial, sans-serif; font-size:1.2em; margin:-10px 0;}
+												
+						h4.app_feature {font-family:'UniversLightUltraCondensed', Arial, sans-serif; font-size:2em; margin:20px 0 0 0; color:#555; text-transform:uppercase; border-bottom:1px solid #CCC;}
+						
+						ul.features {font-weight: bold;color:#004b91; list-style:disc outside none; margin-left:25px;}
+							ul li ul.features li:before {content:"";}
+							
+						ul li ul.features li {line-height: 1.2em;margin-bottom: 10px;min-height:1px;}
+						
+						p.download { text-align:right; line-height:1.35em;margin-top:35px;}
+						p.download span.download_gray {font-family:'UniversLight', Arial, sans-serif;font-size:1.5em;}
+						p.download span.download_blue {font-family:'UniversLightUltraCondensed', Arial, sans-serif; color:#004b91;font-size:3em;}
+						p.download span.disclaimer { font-size:.75em;}
+						
+						
+						/******Table*********/
+						table {
+							border-left:1px solid #d9d9d9;
+							border-bottom:1px solid #d9d9d9;
+							border-right:1px solid #d9d9d9;
+							
+							border-spacing: 0px;
+								/*border-collapse: collapse;*/
+							
+							width:100%;
+						}
+						
+						table tr th {
+							border-spacing: 1px;
+							color:#555;
+							font-size:.75em;
+						}
+						table tr td {
+							color:#555;
+							font-size:.75em;	
+						}
+						.dk-blue {background-color:#004b91; color:#fff;font-size:.875em;}
+						.dk-gray {background-color:#999; color:#fff;font-size:.875em;}
+						
+							
+
+/*************Footer****************/
+#pageFooter {
+	background-color:#004b91;
+	color:#fff;
+	padding-top:20px;
+	font-size:.859em;
+	min-height:300px;
+	position:relative;
+	z-index:10;
+}
+.footer-nav {color:#FFF;}
+p.footer-nav + p.footer-nav {margin-top:0;}
+.footer-nav a {color:#fff; text-transform:uppercase; text-decoration:none;}
+.footer-nav a:hover {text-decoration:underline;}
+.legal {margin-top:20px; font-size:.75em; color:#FFF;}
+
+.footer-social {text-align:right;}
+
+#fbIcon, #twIcon {
+	height:30px;
+	width:30px;
+	border-radius:3px;
+	display:inline-block;
+	margin:0px 0px 0px 10px;
+	background-color:#CCC;
+	}
+	
+	
+		#fbIcon:hover {background-color:#4460ae;}
+		#twIcon:hover {background-color:#058cb9;}
+
+/*************Utilities**************/
+
+#bam-container {
+	position:fixed;
+	z-index:100;
+	margin-left: auto; 
+	margin-right: auto;
+	left: 0;
+	right: 0;	
+}
+
+#bam-login-top{
+	background-color:#004b91;
+	height:10px;
+	width:150px;
+	position:absolute;
+	z-index:1001;
+	float:right;
+	top:60px;
+	right:0;
+}
+
+
+#bam-login {
+	background-color:rgba(0,121,179,.9);
+	position:absolute;
+	z-index:1000;
+	float:right;
+	width:150px;
+	height:56px;
+	top:70px;
+	right:0px;
+	cursor:pointer;
+	text-align:right;
+}
+
+#bam-form {
+	right:15px;
+	background-color:rgba(255,255,255,.9);
+	box-shadow:-3px 3px 3px rgba(153,153,153,0.25);
+	font-size:.9em;
+	position: absolute;
+    top: 128px;
+    z-index: 100;
+	padding: 10px 20px 20px;
+	height:auto;
+	width:300px;
+	display:none;
+}
+
+#bam-form p {margin:0 !important;}
+
+/*508 Compliance Form*/
+#bam-form-page {margin:20px 0px;}
+
+#bam-form a:hover {text-decoration:underline;}
+#bam-form .button, .button-blue {width:100%; padding:.5em 1em; background-color:#004b91; color:#fff; border:1px solid #004b91;}
+#bam-form .button:hover, .button-blue:hover {background-color:#fff; color:#004b91; transition:1s; border:1px solid #004b91;}
+
+.subpage-border {
+	border-left: 1px solid #eee;
+    padding-left: 2em;	
+}
+
+[data-magellan-expedition], [data-magellan-expedition-clone] {
+    padding: 0px;
+}
+
+
+
+
+/**********************************************************************************/
+/*** MEDIA QUERIES ***/
+/**********************************************************************************/
+/**********************************************************************************/
+
+/* Very Large Screens */
+/**********************/
+@media only screen and (min-width: 1550px){
+	.index .orbit-container ul li {height:700px;}
+	.covered-banner-container {top:-100px;}
+}
+
+/* Large Screens */
+/*****************/
+@media only screen and (min-width: 881px) and (max-width: 1270px) {
+	.index .orbit-container ul li div {background-size:130%;}
+	.covered-banner-container {top:-200px;}
+	.covered-banner { width:90%;}
+
+}
+
+
+/* Tablet */
+/*********************/
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	
+	
+	.tab-bar div.medium-8 {padding:0 !important;}
+	
+	.covered-banner { width:97%;}
+	.covered-banner div.medium-6 {padding:0 !important;}
+	.index .orbit-container ul li div {background-size: 140% auto;}
+	
+	#mainNav a {
+		padding: 15px 4px 0 3px;
+    font-size: 11px;
+	}
+	
+	#mainNav a .menu_txt {margin-left:0;}
+		
+	.bluetitle.module.parallax {background-position: -10% 0 !important;background-size: 70% auto;}
+	
+	
+	.find_doctor .graphic_section_2 {padding-top: 400px;}
+	
+	div.web_tools_orbit_info {width: 50%;}
+	
+	ul.web_tools_orbit li.centeredapp p.download,
+	ul.web_tools_orbit li.centeredapp p.disclaimer {margin-right: 35px;}
+	
+	ul.web_tools_orbit li{background-size:50% !important;}
+			ul.web_tools_orbit li.bcbsapp {background:url('../img/bcbs_app_bkg_tablet.png') no-repeat right -30px transparent;}
+			ul.web_tools_orbit li.centeredapp {background:url('../img/centered_app_bkg_tablet.png') no-repeat right -30px transparent;}
+			ul.web_tools_orbit li.healthyfamapp {background:url('../img/hf_app_bkg_tablet.png') no-repeat right -30px transparent;}
+			
+	.statename {
+			height: auto;
+			margin: 0 10px -25px;
+			max-width: 100%;
+			top:60px;
+			left:0;
+			width:90%;
+			position:absolute;
+		}
+			.statename_content {white-space:normal;}
+			
+			.states:hover .statename {margin:0 10px -25px;}
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1024px) {
+	.bluetitle.module.parallax {background-position: 5% 0 !important;background-size: 50% auto;}
+}
+
+/* Small Tablets */
+/*********************/
+@media only screen and (max-width: 767px) {
+	
+	.tab-bar {height:80px;}
+	
+	#mainNav a {
+		padding: 15px 7px 0;
+    font-size: 11px;
+	}
+	#mainNav a img { height:25px;display:block;}
+	#mainNav a .menu_txt {
+		line-height: 1em;
+    margin-left: -1px;
+    margin-top: -2px;
+    vertical-align: top;
+		}
+	#bam-login-top{ top:70px;}
+	#bam-login { top:80px;}
+	#bam-form {top:138px;}
+	
+	.index .orbit-container ul li div {background-size:180%;}
+	.covered-banner { width:97%;}
+	.covered-banner div.medium-6 {padding:0 !important;}
+	
+	.main-section {margin-top: 80px;}
+	
+	.bluetitle.module.parallax {background-position: -10% 5% !important;background-size: 75% auto;}
+	.bluetitle h1 {margin-top:25px;}
+	
+	.content_page .bluetitle {
+				min-height: 115px;
+				padding-top: 3%;
+				}
+	.contact_top {
+    margin-top: 0;
+		}
+		
+	.statename {
+			height: auto;
+			margin: 0 10px -25px;
+			max-width: 100%;
+			top:60px;
+			left:0;
+			width:90%;
+			position:absolute;
+		}
+			.statename_content {white-space:normal;}
+			
+			.states:hover .statename {margin:0 10px -25px;}
+			.states {margin-bottom:20px;}
+		
+	.web_tools .graphic_section.second_graphic_section	{margin-top:0 !important;}
+	ul.web_tools_orbit li {background-size:65% !important;}
+	div.web_tools_orbit_info {width: 65%;}
+	
+	ul.web_tools_orbit li{background-size:35% !important;}
+			ul.web_tools_orbit li.bcbsapp {background:url('../img/bcbs_app_bkg_mobile.png') no-repeat right -10px transparent;}
+			ul.web_tools_orbit li.centeredapp {background:url('../img/centered_app_bkg_mobile.png') no-repeat right -10px transparent;}
+			ul.web_tools_orbit li.healthyfamapp {background:url('../img/hf_app_bkg_mobile.png') no-repeat right -10px transparent;}
+}
+	
+
+
+/* Mobile */
+/*********************/
+
+@media only screen and (max-width: 640px) {
+	
+	a.phoneLink:hover, a.phoneLink:active, a.phoneLink:visited {color:#008dd5; text-decoration:none; cursor:pointer;}
+	
+	.index .orbit-container {margin-top: 0;height:530px;}
+	.index .orbit-container ul li div {background-size:210%;}
+			.index .orbit-bullets-container {margin: 30px 0 0 0;}
+			.orbit-bullets {display: block;}
+			.orbit-bullets li {height: 15px;margin-right: 25px;width: 15px;}
+			
+	.covered-banner { width:97%;height:250px;}
+	.covered-banner div.medium-6 {padding:0 !important;}
+	.covered-banner-container {top:-275px;}
+	.textfill {height:100px; margin-bottom:30px;}
+	.covered-banner .button {padding: 0.5rem 1rem; font-size:1em;}
+	
+	#callout-sections .callout_div {height:auto !important; width:47%;}
+	#callout-sections .callout_div img {width:50%;}
+		.callout_div:hover {cursor:pointer;}
+	#callout-sections .callout_div h3 {font-size:24px;}
+	
+	.callout_div {margin-bottom:20px;}
+	
+	.bucket-content {min-height:auto !important;}
+	
+	.content_row {
+		background-image:none;
+	}
+	#bam-login {
+		display:none;	
+	}
+	ul.off-canvas-list li a:hover,
+	ul.off-canvas-list li.active a {
+		background-color:#004b91;	
+		color:white !important;
+	}
+		ul.off-canvas-list li.bam_login a:hover {background-color:#FFF !important;}
+		
+		
+	.large-logo-container {
+		padding-top:7px;
+	}
+	.tab-bar {
+		background-color:#fff;	
+		height:50px;
+	}
+	.right-small {
+		border-left:1px solid #eee;	
+	}
+	.tab-bar .menu-icon {
+		color:#004b91;	
+	}
+	.content_row {
+		background-image:none;	
+	}
+	.tab-bar .menu-icon span::after {
+    	box-shadow: 0 0 0 1px #004b91, 0 7px 0 1px #004b91, 0 14px 0 1px #004b91;
+	}
+	.graphic_section {padding-top:35%;}
+			.contact_us .graphic_section {padding-top:7%;}
+			
+	.graphic_section h2 {font-size:.9em;}
+	
+	.medical_coverage .graphic_section_1 {margin-bottom: 20px;}
+	.advantages_membership .graphic_section_1 {margin-bottom: 30px;}
+	
+	.medical_coverage .graphic_section:before {
+				background-image:url(../img/doctor_exam_lft_mobile.png), rgb(255,255,255);
+				background-image:url(../img/doctor_exam_lft_mobile.png), -moz-linear-gradient(top,  rgba(255,255,255,1) 50%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+				background-image:url(../img/doctor_exam_lft_mobile.png), -webkit-gradient(linear, left top, left bottom, color-stop(50%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+				background-image:url(../img/doctor_exam_lft_mobile.png), -webkit-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+				background-image:url(../img/doctor_exam_lft_mobile.png), -o-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+				background-image:url(../img/doctor_exam_lft_mobile.png), -ms-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* IE10+ */
+				background-image:url(../img/doctor_exam_lft_mobile.png), linear-gradient(to bottom,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* W3C */
+				
+				background-position: right -31px;
+				background-size:100%;
+				}
+				
+			.medical_coverage .graphic_section:after {
+				
+				background-image:url(../img/doctor_exam_rt_mobile.png), rgb(255,255,255);
+				background-image:url(../img/doctor_exam_rt_mobile.png), -moz-linear-gradient(top,  rgba(255,255,255,1) 50%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+				background-image:url(../img/doctor_exam_rt_mobile.png), -webkit-gradient(linear, left top, left bottom, color-stop(50%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+				background-image:url(../img/doctor_exam_rt_mobile.png), -webkit-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+				background-image:url(../img/doctor_exam_rt_mobile.png), -o-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+				background-image:url(../img/doctor_exam_rt_mobile.png), -ms-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* IE10+ */
+				background-image:url(../img/doctor_exam_rt_mobile.png), linear-gradient(to bottom,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* W3C */
+				
+				
+				background-position: left -20px;
+				background-size:100%;
+				}
+				
+				
+			.prescription_drugs .graphic_section:before {
+				background-image:url(../img/pharmacist_lft_mobile.png), rgb(255,255,255);
+				background-image:url(../img/pharmacist_lft_mobile.png), -moz-linear-gradient(top,  rgba(255,255,255,1) 50%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+				background-image:url(../img/pharmacist_lft_mobile.png), -webkit-gradient(linear, left top, left bottom, color-stop(50%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+				background-image:url(../img/pharmacist_lft_mobile.png), -webkit-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+				background-image:url(../img/pharmacist_lft_mobile.png), -o-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+				background-image:url(../img/pharmacist_lft_mobile.png), -ms-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* IE10+ */
+				background-image:url(../img/pharmacist_lft_mobile.png), linear-gradient(to bottom,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* W3C */
+				
+				background-position: right -15px;
+				background-size:100%;
+				}
+				
+			.prescription_drugs .graphic_section:after {
+				background-image:url(../img/pharmacist_rt_mobile.png), rgb(255,255,255);
+				background-image:url(../img/pharmacist_rt_mobile.png), -moz-linear-gradient(top,  rgba(255,255,255,1) 50%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+				background-image:url(../img/pharmacist_rt_mobile.png), -webkit-gradient(linear, left top, left bottom, color-stop(50%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+				background-image:url(../img/pharmacist_rt_mobile.png), -webkit-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+				background-image:url(../img/pharmacist_rt_mobile.png), -o-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+				background-image:url(../img/pharmacist_rt_mobile.png), -ms-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* IE10+ */
+				background-image:url(../img/pharmacist_rt_mobile.png), linear-gradient(to bottom,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* W3C */
+	
+				background-position: left -15px;
+				background-size:100%;
+				}
+				
+				
+				.find_doctor .graphic_section:before {
+					background-image:url(../img/finddr_lft_mobile.png), rgb(255,255,255);
+					background-image:url(../img/finddr_lft_mobile.png), -moz-linear-gradient(top,  rgba(255,255,255,1) 50%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+					background-image:url(../img/finddr_lft_mobile.png), -webkit-gradient(linear, left top, left bottom, color-stop(50%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+					background-image:url(../img/finddr_lft_mobile.png), -webkit-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+					background-image:url(../img/finddr_lft_mobile.png), -o-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+					background-image:url(../img/finddr_lft_mobile.png), -ms-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* IE10+ */
+					background-image:url(../img/finddr_lft_mobile.png), linear-gradient(to bottom,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* W3C */
+					
+					background-position: right -15px;
+					background-size:100%;
+					}
+				
+			.find_doctor .graphic_section:after {
+					background-image:url(../img/finddr_rt_mobile.png), rgb(255,255,255);
+					background-image:url(../img/finddr_rt_mobile.png), -moz-linear-gradient(top,  rgba(255,255,255,1) 50%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+					background-image:url(../img/finddr_rt_mobile.png), -webkit-gradient(linear, left top, left bottom, color-stop(50%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+					background-image:url(../img/finddr_rt_mobile.png), -webkit-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+					background-image:url(../img/finddr_rt_mobile.png), -o-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+					background-image:url(../img/finddr_rt_mobile.png), -ms-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* IE10+ */
+					background-image:url(../img/finddr_rt_mobile.png), linear-gradient(to bottom,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* W3C */
+		
+					background-position: left -20px;
+					background-size:100%;
+					}
+					
+				
+				.advantages_membership .graphic_section:before {
+						background-image:url(../img/drs_chart_lft_mobile.png), rgb(255,255,255);
+						background-image:url(../img/drs_chart_lft_mobile.png), -moz-linear-gradient(top,  rgba(255,255,255,1) 50%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+						background-image:url(../img/drs_chart_lft_mobile.png), -webkit-gradient(linear, left top, left bottom, color-stop(50%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+						background-image:url(../img/drs_chart_lft_mobile.png), -webkit-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+						background-image:url(../img/drs_chart_lft_mobile.png), -o-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+						background-image:url(../img/drs_chart_lft_mobile.png), -ms-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* IE10+ */
+						background-image:url(../img/drs_chart_lft_mobile.png), linear-gradient(to bottom,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* W3C */
+						
+						background-position: right -24px;
+						background-size:100%;
+					}
+				
+			.advantages_membership .graphic_section:after {
+					background-image:url(../img/drs_chart_rt_mobile.png), rgb(255,255,255);
+					background-image:url(../img/drs_chart_rt_mobile.png), -moz-linear-gradient(top,  rgba(255,255,255,1) 50%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+					background-image:url(../img/drs_chart_rt_mobile.png), -webkit-gradient(linear, left top, left bottom, color-stop(50%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+					background-image:url(../img/drs_chart_rt_mobile.png), -webkit-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+					background-image:url(../img/drs_chart_rt_mobile.png), -o-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+					background-image:url(../img/drs_chart_rt_mobile.png), -ms-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* IE10+ */
+					background-image:url(../img/drs_chart_rt_mobile.png), linear-gradient(to bottom,  rgba(255,255,255,1) 50%,rgba(229,229,229,1) 100%); /* W3C */
+		
+					background-position: left -24px;
+					background-size:100%;
+					}
+					.web_tools .graphic_section {margin-top:0;}
+					
+		.vertical_title_txt {margin: 0 -7px 0 -11px;top: -10px;}
+		.prescription_drugs .graphic_section span.stacked_gray {top:2px;}
+		.prescription_drugs .vertical_title_txt {margin: 0 -6px 0 -3px;top: -8px;}
+		
+		.content_section {margin-top:0;}
+		
+		p.tools_desc {top:0;text-align:left;}
+		.bam_logo {width:50%;}	
+		.bam_img {display:block; margin: 10px auto 0 auto;width:85%;}
+		
+		.web_tools_orbit_container {padding-bottom: 0px;}
+		.web_tools_orbit_container .orbit-bullets-container {
+			margin: 0 auto;
+			position: relative;
+			text-align: center;
+			top: -40px;
+			width: 100%;
+			z-index: 1000;
+		}
+		.web_tools_orbit_container .orbit-bullets-container ol {float:none;height:30px;}
+		
+		
+		.contact_top, .contact_btm {margin-left:-22px; padding:0;}
+		.contact_labels p{font-size:2.75em;}
+		.contact_numbers p {font-size:3.75em; letter-spacing:-1px;}
+			.contact_numbers p span.contact_hours {letter-spacing:0;}
+			
+		
+	#pageFooter {
+		text-align:center;
+	}
+	.footer-social {
+		margin-top:20px;	
+	}
+	.right-off-canvas-menu {
+		background-color:#FFF;
+	}
+	.right-off-canvas-menu a {
+		font-weight:normal;
+		text-decoration:none;
+		font-family: "UniversUltraCondensed", Arial, sans-serif;
+    font-size: 1.5em;
+		color:#004b91 !important;
+	}
+	.right-off-canvas-menu a img {
+		display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+    width: 25px;
+	}
+	ul.off-canvas-list li a {
+		border-bottom: 1px solid #eee;	
+	}
+
+	ul.off-canvas-list li.bam_login a img {
+		width:60%;
+		margin:15px 0;
+	}
+	
+	ul.off-canvas-list li label {
+		background-color:#004b91;	
+		color:white;
+		font-family:'UniversUltraCondensed', Arial, sans-serif;
+		font-size:1.3em;
+	}
+	.off-canvas-wrap.move-left, 
+	.off-canvas-wrap.move-left .inner-wrap {
+		height: 100%;
+		width: 100%;
+	}	
+	
+	.main-section {margin-top: 50px;}
+	.bluetitle.module.parallax {background-position: -10% 5% !important;background-size: 60% auto;background-attachment:scroll;}
+	.bluetitle h1 {font-size:4em;margin:0;}
+	.bluetitle p {margin-bottom:25px;}
+	
+	.content_row div + div {margin-top:25px;padding-top:25px; border-top:1px solid #CCC;}
+			.content_row div + div div + div {margin:0;padding:0; border:none;}
+		
+	.content_section .icon_container {width: 20%;}
+	.content_section .copy {padding: 0;width: 78%;}
+	.content_page .content_section {margin-top: 6%;}
+	
+	.graphic_section h3 {font-size: 0.65em;}
+	
+	/*.graphic_section_2 {margin-bottom:35px;}*/
+	.graphic_section_2 img, .graphic_section_3 img, .tools_2img img {width: 80%; display:block; margin:10px auto;}
+	.graphic_section_2 img.link_img, .graphic_section_3 img.link_img {display:inline; margin:0; width:auto;}
+	
+	.find_doctor .graphic_section_2 {padding-top: 40px;margin-bottom:0;}
+	.callout p strong {font-size: 1.1em;}	
+	
+	div.web_tools_orbit_info {width: 65%;}
+
+
+	.footer-social {text-align:center;}
+	#fbIcon, #twIcon {margin:0; height:40px; width:40px;}
+	#fbIcon img, #twIcon img {width:40px;}
+		#fbIcon {margin-right:15px;}
+}
+
+
+@media only screen and (max-width: 480px) {
+	.index .orbit-container {margin-top: 0;height:525px;}
+	.index .orbit-container ul li div {background-size:260%;}
+		.orbit-bullets {top:0;}
+	
+	.covered-banner {top:-110px;}
+	.textfill {height:100px; margin-bottom:0;}
+	.covered-banner .button {padding: 0.5rem 1rem; font-size:1em;}
+	
+	#callout-sections .callout_div img {width:75%;}
+	
+	.bluetitle.module.parallax {background-position: 269% 5% !important;background-size: 110% auto;}
+	.bluetitle p {margin-bottom:15px;}
+	
+	.bam_logo {width:85%;}	
+	
+	.contact_labels, .contact_numbers { margin:0 !important;padding:5px;}
+		.contact_us .contact_numbers .bold_blue a{font-size:.65em;}
+		.contact_hours {font-size:.175em !important;}
+		.contact_labels p {font-size: 2em;margin-right: 0;padding-top: 17px;}			
+	
+	.content_page .content_section {margin-top: 10%;}
+	
+	.graphic_section_2 img, .graphic_section_3 img, .tools_2img img {width: 100%;}
+	
+	ul.web_tools_orbit li p.download,
+	ul.web_tools_orbit li p.disclaimer {margin-right:0; width:145%;}
+	
+	.web_tools_orbit_container {padding-bottom: 35px;}
+		.web_tools_orbit_container .orbit-bullets-container {top: 0;}
+	
+	.states {width:48%;}
+}
+
+@media only screen and (max-width: 397px) {
+	.index .orbit-container {margin-top: 0;height:475px;}
+	.index .orbit-container ul li div {background-size:260%;}
+			.index .orbit-bullets-container {margin-top:0;}
+			.orbit-bullets {padding-top:0;}
+	.covered-banner {top:-180px;}
+	.textfill {height:75px;}
+	.covered-banner .button {padding: 0.5rem 2rem;}
+	
+	#callout-sections .callout_div img {width:75%;}
+	
+}
